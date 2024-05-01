@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Alunos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="container-table">
+        <div class="container-header-table">
+            <h1>Cadastro de alunos</h1>
+            <button onclick="adicionar()">adicionar</button>
+        </div>
+        <table id="table-costumers" class="table">
+            <thead>
+                <tr>
+                    <th>RA</th>
+                    <th>Nome</th>
+                    <th>Cidade</th>
+                    <th>Estado</th>
+                    <th>Curso</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div id="container-modal" class="bg-black">
+        <form id="form-modal" onsubmit="return false">
+            <div class="form-title">
+                <div id="titulo">Adicionar Alunos</div>
+                <div id="fechar" onclick="cancelar()">X</div>
+            </div>
+            <div class="form-group">
+                <label>RA</label>
+                <input type="text" name="ra" id="ra">
+            </div>
+            <div class="form-group">
+                <label>Nome</label>
+                <input type="text" name="nome" id="nome">
+            </div>
+            <div class="form-group">
+                <label>Cidade</label>
+                <input type="text" name="cidade" id="cidade">
+            </div>
+            <div class="form-group">
+                <label>Estado</label>
+                <select name="estado" id="estado">
+                    <option value="sl">Selecione seu estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Curso</label>
+                <input type="text" name="curso" id="curso">
+            </div>
+            <div class="form-buttons">
+                <button class="salvar" onclick="salvar()">Salvar</button>
+                <button class="cancelar" onclick="cancelar()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
